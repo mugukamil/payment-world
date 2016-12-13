@@ -4,7 +4,8 @@ jQuery(document).ready(function($) {
     var $jsSelect = $('.js-select'),
         $inputNumWrap = $('.input-num-wrapper'),
         $inputNum = $('.input-num'),
-        $payListImgWrap = $('.payments-list__img-wrap');
+        $payListImgWrap = $('.payments-list__img-wrap'),
+        $formDirector = $('.js-form-director');
 
     $jsSelect.next('.btn--orange').on('click', function(e) {
         e.preventDefault();
@@ -29,6 +30,13 @@ jQuery(document).ready(function($) {
     $payListImgWrap.on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass('active checked');
+    });
+
+    $formDirector.on('click', '.btn--orange', function(event) {
+        event.preventDefault();
+
+        $formDirector.clone(true).insertAfter($formDirector).find('.col-md-4').html('');
+
     });
 
 });

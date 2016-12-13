@@ -6526,7 +6526,6 @@ a.btn i {
 
 .main-form__first {
   padding: 15px;
-  min-height: 696px;
   background-color: #0075bb;
   background-image: linear-gradient(180deg, #004c91 0%, #009ddf 100%);
   border-radius: 4px;
@@ -6539,7 +6538,6 @@ a.btn i {
 
 .main-form__second {
   padding: 18px 15px;
-  min-height: 676px;
   background-color: #0075bb;
   background-image: linear-gradient(180deg, #004c91 0%, #009ddf 100%);
   border-radius: 4px;
@@ -6660,6 +6658,7 @@ a.btn i {
   color: white;
   font-size: 15px;
   background-color: #ed6646;
+  margin-bottom: 20px;
 }
 
 .btn--orange {
@@ -6732,8 +6731,83 @@ a.btn i {
   display: none;
 }
 
+.form-inline input {
+  padding: 6px 10px;
+}
+
 .form-inline .form-group + .form-group {
   margin-left: 4px;
+}
+
+.form-company .form-group input {
+  width: 225px;
+}
+
+.form-company .form-group:last-child input {
+  width: 127px;
+}
+
+.form-company label {
+  margin-left: 8px;
+  margin-right: 10px;
+}
+
+.form-addresses .form-group:first-child input {
+  width: 225px;
+}
+
+.form-addresses .form-group:nth-child(2) input {
+  width: 175px;
+}
+
+.form-addresses .form-group:nth-child(3) input {
+  width: 115px;
+}
+
+.form-addresses .form-group:last-child select {
+  width: 208px;
+}
+
+.form-director .form-group:nth-child(1) input {
+  width: 162px;
+}
+
+.form-director .form-group + .form-group {
+  margin-left: 3px;
+}
+
+.form-director .form-group input {
+  width: 155px;
+}
+
+.form-director .form-group-title input {
+  width: 138px;
+}
+
+.form-director .btn--orange {
+  width: 110px;
+  padding-left: 4px;
+  margin-left: 7px;
+}
+
+.form-main {
+  margin-bottom: 30px;
+}
+
+.form-main .form-group-title input {
+  width: 138px;
+}
+
+.form-main .form-group:first-child input {
+  width: 235px;
+}
+
+.form-main .form-group:last-child input {
+  width: 187px;
+}
+
+.form-main input {
+  width: 180px;
 }
 
 @media screen and (min-width: 768px){

@@ -110,7 +110,6 @@ a.btn
       height: 28px
   &__first
     padding: 15px
-    min-height: 696px
     background-color: #0075bb
     background-image: linear-gradient(180deg, #004c91 0%, #009ddf 100%)
     border-radius: 4px
@@ -119,7 +118,6 @@ a.btn
       font-size: 15px
   &__second
     padding: 18px 15px
-    min-height: 676px
     background-color: #0075bb
     background-image: linear-gradient(180deg, #004c91 0%, #009ddf 100%)
     border-radius: 4px
@@ -211,6 +209,7 @@ a.btn
   color: white
   font-size: 15px
   background-color: #ed6646
+  margin-bottom: 20px
 
 .btn--orange
   height: 28px
@@ -264,6 +263,67 @@ a.btn
       display: none
 
 .form-inline
+  input
+    padding: 6px 10px
   .form-group
     & + .form-group
       margin-left: 4px
+
+.form-company
+  .form-group
+    input
+      width: 225px
+    &:last-child
+      input
+        width: 127px
+  label
+    margin-left: 8px
+    margin-right: 10px
+
+.form-addresses
+  .form-group
+    &:first-child
+      input
+        width: 225px
+    &:nth-child(2)
+      input
+        width: 175px
+    &:nth-child(3)
+      input
+        width: 115px
+    &:last-child
+      select
+        width: 208px
+
+
+.form-director
+  .form-group:nth-child(1)
+    input
+      width: 162px
+  .form-group
+    & + .form-group
+      margin-left: 3px
+    input
+      width: 155px
+  .form-group-title
+    input
+      width: 138px
+  .btn--orange
+    width: 110px
+    padding-left: 4px
+    margin-left: 7px
+
+.form-main
+  margin-bottom: 30px
+  .form-group-title
+    input
+      width: 138px
+  .form-group
+    &:first-child
+      input
+        width: 235px
+    &:last-child
+      input
+        width: 187px
+  input
+    width: 180px
