@@ -6688,6 +6688,54 @@ a.btn i {
   font-size: 12px;
 }
 
+.checkbox-label {
+  cursor: pointer;
+}
+
+.checkbox-label + .form-group {
+  margin-left: 8px;
+}
+
+.checkbox-label + .checkbox-label {
+  margin-left: 15px;
+}
+
+.checkbox-label__text {
+  margin-top: 5px;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+.checkbox-label input {
+  display: none;
+}
+
+.checkbox-label input:checked + .icon-wrap i {
+  display: inline-block;
+}
+
+.checkbox-label .icon-wrap {
+  width: 29px;
+  height: 28px;
+  background-color: white;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  cursor: pointer;
+}
+
+.checkbox-label .icon-wrap i {
+  font-size: 14px;
+  color: #ed6646;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-inline .form-group + .form-group {
+  margin-left: 4px;
+}
+
 @media screen and (min-width: 768px){
   .jumbotron{
     padding-top: 48px;

@@ -29,12 +29,74 @@ block content
             label.col-md-4 Registered Company Name:
             .col-md-8
               input.form-control(type="text", name="company-name")
-        .from
+        .form
           .row
             label.col-md-4 Type of Business:
             .col-md-8
-              label
-                input.checkbox-inline(type="checkbox")
-                | Sole Proprietor
+              label.checkbox-label
+                input.checkbox-inline(type="checkbox" name="sole-proprietor")
+                span.icon-wrap
+                  i.glyphicon.glyphicon-ok
+                span.checkbox-label__text Sole Proprietor
+              label.checkbox-label
+                input.checkbox-inline(type="checkbox" name="lim-liability")
+                span.icon-wrap
+                  i.glyphicon.glyphicon-ok
+                span.checkbox-label__text Limited Liability Comp.
+              label.checkbox-label
+                input.checkbox-inline(type="checkbox" name="pub-lim-comp")
+                span.icon-wrap
+                  i.glyphicon.glyphicon-ok
+                span.checkbox-label__text Public Limited Comp.
+              label.checkbox-label
+                input.checkbox-inline(type="checkbox" name="priv-corp")
+                span.icon-wrap
+                  i.glyphicon.glyphicon-ok
+                span.checkbox-label__text Private Corporation
+          .row
+            .col-md-4
+            .col-md-8
+              .form-inline
+                label.checkbox-label
+                  input.checkbox-inline(type="checkbox" name="other")
+                  span.icon-wrap
+                    i.glyphicon.glyphicon-ok
+                  span.checkbox-label__text Other
+                .form-group
+                  input.form-control(type="text" name="other")
+        .form
+          .row
+            label.col-md-4 Business Address:
+            .col-md-8
+              .form-inline.business-form
+                .form-group
+                  input.form-control(type="text", name="business-address" placeholder="Address")
+                .form-group
+                  input.form-control(type="text", name="business-city" placeholder="City")
+                .form-group
+                  input.form-control(type="text", name="business-zip" placeholder="ZIP")
+                .form-group
+                  select.select-country.form-control(name="business-country")
+                    option(value="") Select Country
+                    option(value="Germany") Germany
+                    option(value="Italy") Italy
+                    option(value="Spain") Spain
+        .form
+          .row
+            label.col-md-4 Billing Address:
+            .col-md-8
+              .form-inline
+                .form-group
+                  input.form-control(type="text", name="billing-address" placeholder="Address")
+                .form-group
+                  input.form-control(type="text", name="billing-city" placeholder="City")
+                .form-group
+                  input.form-control(type="text", name="billing-zip" placeholder="ZIP")
+                .form-group
+                  select.select-country.form-control(name="billing-country")
+                    option(value="") Select Country
+                    option(value="Germany") Germany
+                    option(value="Italy") Italy
+                    option(value="Spain") Spain
         .text-center
           button.btn.btn--big NEXT STEP

@@ -232,3 +232,38 @@ a.btn
     i
       color: #ed6646
       font-size: 12px
+
+.checkbox-label
+  cursor: pointer
+  & + .form-group
+    margin-left: 8px
+  & + .checkbox-label
+    margin-left: 15px
+  &__text
+    margin-top: 5px
+    margin-left: 8px
+    display: inline-block
+  input
+    display: none
+    &:checked
+      & + .icon-wrap i
+        display: inline-block
+  .icon-wrap
+    width: 29px
+    height: 28px
+    background-color: white
+    border-radius: 4px
+    display: inline-block
+    vertical-align: top
+    text-align: center
+    cursor: pointer
+    i
+      font-size: 14px
+      color: #ed6646
+      margin-top: 5px
+      display: none
+
+.form-inline
+  .form-group
+    & + .form-group
+      margin-left: 4px
