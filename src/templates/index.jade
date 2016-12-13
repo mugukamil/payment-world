@@ -1,0 +1,160 @@
+---
+title: Payment World
+---
+extends layouts/_layout
+block content
+  .container
+    header.main-header.text-center
+      a.logo(href='#')
+        img(src="img/logo.png", alt="payment world")
+    nav.main-nav
+      .main-nav__left
+        button.btn.disabled
+          i.glyphicon.glyphicon-chevron-left
+      .main-nav__step
+        a.btn.btn--active Business Information
+        i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
+      .main-nav__step
+        a.btn Merchant Information
+        i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
+      .main-nav__step
+        a.main-nav__step-icon.btn Ownership Information
+      .main-nav__right
+        button.btn
+          i.glyphicon.glyphicon-chevron-right
+    .main-form
+      form.main-form__first
+        .form-group
+          label(for="offered-products") Offered products and services:
+          textarea#offered-products.form-control(name="offered-products" placeholder="(specify product, service or/and information)" rows="4")
+        .form-inline
+          .row
+            label.col-md-4 Preferred currency for Settlement:
+            .col-md-8
+              select.js-select(name="currency-settlement")
+                option(value="") Select Currency
+                option(value="USD") USD
+                option(value="EURO") EURO
+                option(value="Funts") Funts
+              button.btn.btn--orange(type="button")
+                span
+                  i.glyphicon.glyphicon-plus
+                | Add Currency
+        .form-inline
+          .row
+            label.col-md-4 In which currencies are the products offered and sold?
+            .col-md-8
+              select.js-select(name="currency-product")
+                option(value="") Select Currency
+                option(value="USD") USD
+                option(value="EURO") EURO
+                option(value="Funts") Funts
+              button.btn.btn--orange(type="button")
+                span
+                  i.glyphicon.glyphicon-plus
+                | Add Currency
+        .form-inline
+          .row
+            label.col-md-4 Distribution Sales Volume per Country (%)
+            .col-md-8
+              select.select-country.js-select(name="sales-country")
+                option(value="") Select Country
+                option(value="Germany") Germany
+                option(value="Italy") Italy
+                option(value="Spain") Spain
+              .form-group.input-num-wrapper
+                label.label-num %
+                input.input-num.form-control(type="number", name="sales-country-pct")
+              button.btn.btn--orange(type="button")
+                span
+                  i.glyphicon.glyphicon-plus
+                | Add Country
+        .form-inline
+          .row
+            label.col-md-4 Ticket Amount
+            .col-md-8
+              .form-group.ticket-form-group
+                label.mr8(for="ticket-amount-avg") Average
+                input#ticket-amount-avg.form-control(type="number", name="ticket-amoung-avg")
+              .form-group.ticket-form-group
+                label.mr8(for="ticket-amount-max") Max
+                input#ticket-amount-max.form-control(type="number", name="ticket-amoung-max")
+        .form
+          .row
+            label.col-md-4 Trading/Business Webpage URL:
+            .col-md-8
+              input.form-control(type="url", name="website-url")
+        .form-inline
+          .row
+            label.col-md-4 Already accepted credit cards:
+            .col-md-8
+              select.select-country.js-select(name="credit-cards")
+                option(value="") Select Card
+                option(value="Visa") Visa
+                option(value="MasterCard") MasterCard
+              button.btn.btn--orange(type="button")
+                span
+                  i.glyphicon.glyphicon-plus
+                | Add Card
+        .form-inline
+          .row
+            label.col-md-4 Other payment methods and Distribution of Sales Volume (%)
+            .col-md-8
+              select.select-country.js-select(name="payment-method")
+                option(value="") Select Payment Method
+                option(value="Paypal") Paypal
+                option(value="Sepa") SEPA
+              .form-group.input-num-wrapper
+                label.label-num %
+                input.input-num.form-control(type="number", name="sales-country-pct")
+              button.btn.btn--orange(type="button")
+                span
+                  i.glyphicon.glyphicon-plus
+                | Add Method
+        .form
+          label In which other payment methods would the company be interested to offer?
+          ul.payments-list
+            -for (var i = 1; i <= 22; i++)
+              li
+                div.payments-list__img-wrap
+                  img(src="img/payments/#{i}.png", alt="payment")
+            li.payments-list__empty
+            li.payments-list__empty
+        .form
+          .row
+            label.col-md-4 Former PSP and Acquirer:
+            .col-md-8
+              input.form-control(type="text", name="psp")
+      .main-form__second
+        p Merchant processing history for the last 12 months: (If applicable)
+        - ths = ['Sales Volume', 'No. of Transactions', 'Chargeback Volume', 'No. of Chargebacks','Refunds Volume', 'No. of Refunds']
+        form
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th
+                  each th in ths
+                    th #{th}
+              tbody
+                tr
+                  td Last Month
+                  each th in ths
+                    td
+                      input(type="text" name="#{th.replace(/\s+/g, '-').replace(/\./g, '').toLowerCase()}")
+                -for (var i = 2; i <= 12; i++)
+                  tr
+                    th(scope="row") Month #{i}
+                    each th in ths
+                      td
+                        input(type="text" name="#{th.replace(/\s+/g, '-').replace(/\./g, '').toLowerCase()}#{i}")
+            .form-inline.form-file
+              span Alternatively the processing history can be uploade as pdf document
+              label
+                button.btn.btn--orange(type="button")
+                  span
+                    i.glyphicon.glyphicon-plus
+                  | Upload PDF
+                input(type="file" name="upload-pdf")
+            .text-center
+              button.btn.btn--big NEXT STEP

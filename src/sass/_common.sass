@@ -1,0 +1,234 @@
+body
+  color: white
+  font-family: Raleway
+  font-weight: 400
+  padding-top: 38px
+
+.main-header
+  margin-bottom: 40px
+
+ul
+  list-style-type: none
+
+.container
+  padding-left: 0
+  padding-right: 0
+
+.logo
+  display: inline-block
+
+.mr8
+  margin-right: 8px
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.main-nav
+  &__left
+    margin-right: 11px
+  &__right
+    margin-left: 9px
+  a
+    color: #272727
+    font-size: 15px
+    font-weight: 400
+  > div
+    display: inline-block
+  &__step-icon
+    color: #005b9f
+    margin-left: 5px
+  &__step
+    .btn
+      width: 320px
+
+a.btn.btn--active
+  background-color: #ed6646
+  color: white
+  border: none
+
+.btn.disabled,
+a.btn
+  background-color: #f6f6f6
+  border: 1px solid #e4e4e4
+  opacity: 1
+  i
+    color: #e0e0e0
+
+.main-form
+  margin-top: 10px
+  input,select
+    color: #272727
+    font-size: 13px
+    height: 28px
+  select
+    +custom-select-reset
+    width: 270px
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAPElEQVQYV2N8k+qawMjIOJ8BD/j//38iI0gen2KQIpHZuxeAFeJSDFMEkocrRFeMrAhDIUwxiAZZh+xsALFwIfz8pefqAAAAAElFTkSuQmCC) no-repeat 95% center #fff
+    padding-left: 9px
+    margin-right: 3px
+    cursor: pointer
+    &.select-country
+      width: 190px
+  .form
+    margin-top: 8px
+    margin-bottom: 8px
+  .form-inline
+    width: 100%
+    span.label
+      background-color: #06548c
+      display: inline-block
+      vertical-align: top
+      color: white
+      font-size: 15px
+      margin-left: 7px
+      padding: 6.5px 17px
+      text-align: center
+    .text-right
+      display: inline-block
+      vertical-align: top
+    & + .form-inline
+      margin-top: 8px
+    .input-num
+      text-align: center
+      width: 45px
+      height: 28px
+      margin-right: 3px
+    .label-num
+      margin-left: 9px
+      margin-right: 8px
+  .ticket-form-group
+    &:first-child
+      margin-right: 23px
+      width: 55%
+      input
+        width: 83.5%
+    width: 40%
+    input
+      width: 87%
+      height: 28px
+  &__first
+    padding: 15px
+    min-height: 696px
+    background-color: #0075bb
+    background-image: linear-gradient(180deg, #004c91 0%, #009ddf 100%)
+    border-radius: 4px
+    label
+      color: white
+      font-size: 15px
+  &__second
+    padding: 18px 15px
+    min-height: 676px
+    background-color: #0075bb
+    background-image: linear-gradient(180deg, #004c91 0%, #009ddf 100%)
+    border-radius: 4px
+    margin-top: 8px
+    p
+      color: white
+      font-size: 15px
+
+.payments-list
+  margin-bottom: 20px
+  &__empty
+    opacity: 0.1
+    background-color: white
+    border-radius: 4px
+  &__img-wrap
+    position: relative
+    width: 100%
+    height: 100%
+    &.active
+      border: 5px solid #ed6646
+      &:after
+        content: '\e013'
+        font-family: 'Glyphicons Halflings'
+        display: inline-block
+        position: absolute
+        bottom: 0
+        right: 0
+        color: white
+        font-size: 13px
+        width: 23px
+        height: 20px
+        background-color: #ed6646
+        border-top-left-radius: 50px
+        padding-top: 5px
+        padding-left: 9px
+    img
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      max-width: 100%
+  li
+    display: inline-block
+    width: 77px
+    height: 77px
+    background-color: white
+    border-radius: 4px
+    vertical-align: top
+    text-align: center
+    margin-top: 8px
+    & + li
+      margin-left: 8px
+    &:nth-child(13)
+      margin-left: 0
+
+.table
+  input
+    background-color: white
+    border-radius: 4px
+    border: none
+  thead
+    th
+      &:first-child
+        border-bottom: none
+      border-bottom: 1px solid #0074b8
+      text-align: center
+  td,th
+    color: white
+    font-size: 15px
+    border-top: none
+
+.form-file
+  margin-bottom: 25px
+  label
+    position: relative
+    margin-left: 13px
+    button
+    input[type='file']
+      opacity: 0
+      position: absolute
+      left: 0
+      top: 0
+      width: 125px
+
+.btn--big
+  padding: 20px 115px
+  color: white
+  font-size: 15px
+  background-color: #ed6646
+
+.btn--orange
+  height: 28px
+  width: 125px
+  color: white
+  font-size: 13px
+  background-color: #ed6646
+  padding-left: 6px
+  margin-left: 3px
+  span
+    background-color: #fff
+    width: 16px
+    height: 16px
+    display: inline-block
+    border-radius: 3px
+    margin-right: 8px
+    vertical-align: top
+    padding-left: 2px
+    i
+      color: #ed6646
+      font-size: 12px

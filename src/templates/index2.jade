@@ -1,0 +1,40 @@
+---
+title: Payment World
+---
+extends layouts/_layout
+block content
+  .container
+    header.main-header.text-center
+      a.logo(href='#')
+        img(src="img/logo.png", alt="payment world")
+    nav.main-nav
+      .main-nav__left
+        button.btn.disabled
+          i.glyphicon.glyphicon-chevron-left
+      .main-nav__step
+        a.btn.btn--active Business Information
+        i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
+      .main-nav__step
+        a.btn.btn--active Merchant Information
+        i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
+      .main-nav__step
+        a.main-nav__step-icon.btn Ownership Information
+      .main-nav__right
+        button.btn
+          i.glyphicon.glyphicon-chevron-right
+    .main-form
+      form.main-form__first
+        .form
+          .row
+            label.col-md-4 Registered Company Name:
+            .col-md-8
+              input.form-control(type="text", name="company-name")
+        .from
+          .row
+            label.col-md-4 Type of Business:
+            .col-md-8
+              label
+                input.checkbox-inline(type="checkbox")
+                | Sole Proprietor
+        .text-center
+          button.btn.btn--big NEXT STEP
