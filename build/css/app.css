@@ -2803,6 +2803,65 @@ select[multiple].input-lg,
   color: #737373;
 }
 
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-inline .form-control-static {
+  display: inline-block;
+}
+
+.form-inline .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+
+.form-inline .input-group .input-group-addon,
+.form-inline .input-group .input-group-btn,
+.form-inline .input-group .form-control {
+  width: auto;
+}
+
+.form-inline .input-group .input-group > .form-control {
+  width: 100%;
+}
+
+.form-inline .input-group .control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.form-inline .input-group .radio,
+.form-inline .input-group .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.form-inline .input-group .radio label,
+.form-inline .input-group .checkbox label {
+  padding-left: 0;
+}
+
+.form-inline .input-group .radio input[type="radio"],
+.form-inline .input-group .checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.form-inline .input-group .has-feedback .form-control-feedback {
+  top: 0;
+}
+
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
@@ -4104,6 +4163,65 @@ tbody.collapse.in {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.navbar-form .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control-static {
+  display: inline-block;
+}
+
+.navbar-form .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn,
+.navbar-form .input-group .form-control {
+  width: auto;
+}
+
+.navbar-form .input-group .input-group > .form-control {
+  width: 100%;
+}
+
+.navbar-form .input-group .control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .input-group .radio,
+.navbar-form .input-group .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .input-group .radio label,
+.navbar-form .input-group .checkbox label {
+  padding-left: 0;
+}
+
+.navbar-form .input-group .radio input[type="radio"],
+.navbar-form .input-group .checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.navbar-form .input-group .has-feedback .form-control-feedback {
+  top: 0;
 }
 
 .navbar-nav > li > .dropdown-menu {
@@ -6347,6 +6465,7 @@ body {
   font-family: Raleway;
   font-weight: 400;
   padding-top: 38px;
+  min-width: 1170px !important;
 }
 
 .main-header {
@@ -6360,6 +6479,7 @@ ul {
 .container {
   padding-left: 0;
   padding-right: 0;
+  width: 1130px !important;
 }
 
 .logo {
@@ -6531,6 +6651,11 @@ a.btn i {
   border-radius: 4px;
 }
 
+.main-form__first.index3 {
+  padding-top: 23px;
+  padding-left: 18px;
+}
+
 .main-form__first label {
   color: white;
   font-size: 15px;
@@ -6605,10 +6730,11 @@ a.btn i {
   vertical-align: top;
   text-align: center;
   margin-top: 8px;
+  margin-left: 8px;
 }
 
-.payments-list li + li {
-  margin-left: 8px;
+.payments-list li:first-child {
+  margin-left: 0;
 }
 
 .payments-list li:nth-child(13) {
@@ -6739,6 +6865,10 @@ a.btn i {
   margin-left: 4px;
 }
 
+.form-inline .form-group + .form-group-labeled {
+  margin-left: 23px;
+}
+
 .form-company .form-group input {
   width: 225px;
 }
@@ -6765,7 +6895,7 @@ a.btn i {
 }
 
 .form-addresses .form-group:last-child select {
-  width: 208px;
+  width: 207px;
 }
 
 .form-director .form-group:nth-child(1) input {
@@ -6808,6 +6938,88 @@ a.btn i {
 
 .form-main input {
   width: 180px;
+}
+
+.date-form .form-group-labeled:last-child {
+  margin-left: 20px;
+}
+
+.date-form .form-group-labeled:last-child input {
+  margin-right: 8px;
+  width: 255px;
+}
+
+.date-form .form-group-labeled:last-child span {
+  font-size: 15px;
+}
+
+.date-form .owner-date {
+  width: 112px;
+}
+
+.date-form .owner-month {
+  width: 130px;
+}
+
+.date-form .owner-year {
+  width: 95px;
+}
+
+.form-group-labeled label {
+  margin-right: 12px;
+}
+
+.main-form-first .form-group input {
+  width: 172.5px;
+}
+
+.main-form-first .form-group-labeled input {
+  width: 280px;
+}
+
+.form-passport .form-group input {
+  width: 350px;
+}
+
+.form-passport .form-group:last-child input {
+  width: 240px;
+}
+
+.assuming-form .owner-date {
+  width: 70px;
+}
+
+.assuming-form .owner-month {
+  width: 110px;
+}
+
+.assuming-form .owner-year {
+  width: 95px;
+}
+
+.assuming-form .form-group.form-group-labeled {
+  margin-left: 55px;
+}
+
+.assuming-form select:last-child {
+  margin-right: 0;
+}
+
+.btn-section {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.btn-section button {
+  text-align: left;
+}
+
+.btn-section button i {
+  margin-right: 15px;
+}
+
+.main-form__first.index3 + .main-form__first.index3 {
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 768px){
@@ -7026,54 +7238,6 @@ a.btn i {
   .col-sm-offset-12{
     margin-left: 100%;
   }
-  .form-inline .form-group{
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .form-inline .form-control{
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-  }
-  .form-inline .form-control-static{
-    display: inline-block;
-  }
-  .form-inline .input-group{
-    display: inline-table;
-    vertical-align: middle;
-  }
-  .form-inline .input-group .input-group-addon,
-  .form-inline .input-group .input-group-btn,
-  .form-inline .input-group .form-control{
-    width: auto;
-  }
-  .form-inline .input-group > .form-control{
-    width: 100%;
-  }
-  .form-inline .control-label{
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .form-inline .radio,
-  .form-inline .checkbox{
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .form-inline .radio label,
-  .form-inline .checkbox label{
-    padding-left: 0;
-  }
-  .form-inline .radio input[type="radio"],
-  .form-inline .checkbox input[type="checkbox"]{
-    position: relative;
-    margin-left: 0;
-  }
-  .form-inline .has-feedback .form-control-feedback{
-    top: 0;
-  }
   .form-horizontal .control-label{
     text-align: right;
     margin-bottom: 0;
@@ -7168,54 +7332,6 @@ a.btn i {
   .navbar-nav > li > a{
     padding-top: 15px;
     padding-bottom: 15px;
-  }
-  .navbar-form .form-group{
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .form-control{
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-  }
-  .navbar-form .form-control-static{
-    display: inline-block;
-  }
-  .navbar-form .input-group{
-    display: inline-table;
-    vertical-align: middle;
-  }
-  .navbar-form .input-group .input-group-addon,
-  .navbar-form .input-group .input-group-btn,
-  .navbar-form .input-group .form-control{
-    width: auto;
-  }
-  .navbar-form .input-group > .form-control{
-    width: 100%;
-  }
-  .navbar-form .control-label{
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .radio,
-  .navbar-form .checkbox{
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .radio label,
-  .navbar-form .checkbox label{
-    padding-left: 0;
-  }
-  .navbar-form .radio input[type="radio"],
-  .navbar-form .checkbox input[type="checkbox"]{
-    position: relative;
-    margin-left: 0;
-  }
-  .navbar-form .has-feedback .form-control-feedback{
-    top: 0;
   }
   .navbar-form{
     width: auto;

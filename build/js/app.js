@@ -10,7 +10,8 @@ jQuery(document).ready(function($) {
         $inputNumWrap = $('.input-num-wrapper'),
         $inputNum = $('.input-num'),
         $payListImgWrap = $('.payments-list__img-wrap'),
-        $formDirector = $('.js-form-director');
+        $formDirector = $('.js-form-director'),
+        $index3form = $('.main-form__first.index3');
 
     $jsSelect.next('.btn--orange').on('click', function(e) {
         e.preventDefault();
@@ -37,11 +38,16 @@ jQuery(document).ready(function($) {
         $(this).toggleClass('active checked');
     });
 
-    $formDirector.on('click', '.btn--orange', function(event) {
-        event.preventDefault();
+    $formDirector.on('click', '.btn--orange', function(e) {
+        e.preventDefault();
 
         $formDirector.clone(true).insertAfter($formDirector).find('.col-md-4').html('');
-
     });
+
+    $index3form.on('click', '.btn--orange', function(e) {
+        e.preventDefault();
+
+        $index3form.clone(true).insertAfter($index3form);
+    })
 
 });

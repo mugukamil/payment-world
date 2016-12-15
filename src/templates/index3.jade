@@ -12,140 +12,123 @@ block content
         button.btn.disabled
           i.glyphicon.glyphicon-chevron-left
       .main-nav__step
-        a.btn.btn--active Business Information
+        a(href="/").btn.btn--active Business Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a.btn.btn--active Merchant Information
+        a(href="index2.html").btn.btn--active Merchant Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a.main-nav__step-icon.btn.btn--active Ownership Information
+        a(href="index3.html").main-nav__step-icon.btn.btn--active Ownership Information
       .main-nav__right
         button.btn
           i.glyphicon.glyphicon-chevron-right
     .main-form
-      form.main-form__first
-        .form
-          .row
-            label.col-md-4 Registered Company Name:
-            .col-md-8
-              input.form-control(type="text", name="company-name")
-        .form
-          .row
-            label.col-md-4 Type of Business:
-            .col-md-8
-              label.checkbox-label
-                input.checkbox-inline(type="checkbox" name="sole-proprietor")
-                span.icon-wrap
-                  i.glyphicon.glyphicon-ok
-                span.checkbox-label__text Sole Proprietor
-              label.checkbox-label
-                input.checkbox-inline(type="checkbox" name="lim-liability")
-                span.icon-wrap
-                  i.glyphicon.glyphicon-ok
-                span.checkbox-label__text Limited Liability Comp.
-              label.checkbox-label
-                input.checkbox-inline(type="checkbox" name="pub-lim-comp")
-                span.icon-wrap
-                  i.glyphicon.glyphicon-ok
-                span.checkbox-label__text Public Limited Comp.
-              label.checkbox-label
-                input.checkbox-inline(type="checkbox" name="priv-corp")
-                span.icon-wrap
-                  i.glyphicon.glyphicon-ok
-                span.checkbox-label__text Private Corporation
-          .row
-            .col-md-4
-            .col-md-8
-              .form-inline
-                label.checkbox-label
-                  input.checkbox-inline(type="checkbox" name="other")
-                  span.icon-wrap
-                    i.glyphicon.glyphicon-ok
-                  span.checkbox-label__text Other
+      form
+        .main-form__first.index3
+          .form-inline
+            .row
+              label.col-xs-4 Principal (First Name, Last Name):
+              .col-xs-8.main-form-first
                 .form-group
-                  input.form-control(type="text" name="other")
-        .form
-          .row
-            label.col-md-4 Business Address:
-            .col-md-8
-              .form-inline.form-addresses
+                  input.form-control(type="text", name="owner-firstname" placeholder="First Name")
                 .form-group
-                  input.form-control(type="text", name="business-address" placeholder="Address")
+                  input.form-control(type="text", name="owner-lastname" placeholder="Last Name")
+                .form-group.form-group-labeled
+                  label(for="owner-nationality") Nationality
+                  input.form-control(type="text")
+          .form-inline.date-form
+            - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+            .row
+              label.col-xs-4 Date and Place of Birth:
+              .col-xs-8
                 .form-group
-                  input.form-control(type="text", name="business-city" placeholder="City")
+                  select.owner-date(name="owner-date")
+                    option(value="") Date
+                    -for (var i = 1; i <= 30; i++)
+                      option(value="#{i}") #{i}
+                  .form-group
+                    select.owner-month(name="owner-month")
+                      option(value="") Month
+                      each month in months
+                        option(value="#{month}") #{month}
+                  .form-group
+                    select.owner-year(name="owner-year")
+                      option(value="") Year
+                        -for (var i = 1930; i <= 2017; i++)
+                          option(value="#{i}") #{i}
+                .form-group.form-group-labeled
+                  label(for="owner-ownership") Ownership
+                  input.form-control(type="text")
+                  span %
+          .form
+            .row
+              label.col-xs-4 Owner Address:
+              .col-xs-8
+                .form-inline.form-addresses
+                  .form-group
+                    input.form-control(type="text", name="owner-address" placeholder="Address")
+                  .form-group
+                    input.form-control(type="text", name="owner-city" placeholder="City")
+                  .form-group
+                    input.form-control(type="text", name="owner-zip" placeholder="ZIP")
+                  .form-group
+                    select.select-country.form-control(name="owner-country")
+                      option(value="") Select Country
+                      option(value="Germany") Germany
+                      option(value="Italy") Italy
+                      option(value="Spain") Spain
+          .form
+            .row
+              label.col-xs-4 Passport / ID Number:
+              .col-xs-8
+                .form-inline.form-passport
+                  .form-group
+                    input.form-control(type="text", name="owner-passport")
+                  .form-group.form-group-labeled
+                    label(for="owner-issuing") Issuing Authority:
+                    input.form-control(type="text")
+          .form-inline.date-form.assuming-form
+            - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+            .row
+              label.col-xs-4 Issuing Date:
+              .col-xs-8
                 .form-group
-                  input.form-control(type="text", name="business-zip" placeholder="ZIP")
-                .form-group
-                  select.select-country.form-control(name="business-country")
-                    option(value="") Select Country
-                    option(value="Germany") Germany
-                    option(value="Italy") Italy
-                    option(value="Spain") Spain
-        .form
-          .row
-            label.col-md-4 Billing Address:
-            .col-md-8
-              .form-inline.form-addresses
-                .form-group
-                  input.form-control(type="text", name="billing-address" placeholder="Address")
-                .form-group
-                  input.form-control(type="text", name="billing-city" placeholder="City")
-                .form-group
-                  input.form-control(type="text", name="billing-zip" placeholder="ZIP")
-                .form-group
-                  select.select-country.form-control(name="billing-country")
-                    option(value="") Select Country
-                    option(value="Germany") Germany
-                    option(value="Italy") Italy
-                    option(value="Spain") Spain
-        .form
-          .row
-            label.col-md-4 Company Phone Number:
-            .col-md-8
-              .form-inline.form-company
-                .form-group
-                  input.form-control(type="tel", name="company-phone")
-                .form-group
-                  label(for="company-fax") FAX:
-                  input#company-fax.form-control(type="text", name="company-fax")
-                .form-group
-                  label(for="company-vat") VAT/ TAX ID:
-                  input#company-vat.form-control(type="text", name="company-vat")
-        .form.js-form-director
-          .row
-            label.col-md-4 Director(s):
-            .col-md-8
-              .form-inline.form-director
-                .form-group
-                  input.form-control(type="text", name="directors-name" placeholder="Name")
-                .form-group.form-group-title
-                  input.form-control(type="text", name="directors-title" placeholder="Title/Responsibility")
-                .form-group
-                  input.form-control(type="tel", name="directors-phone" placeholder="Phone Number")
-                .form-group
-                  input.form-control(type="email", name="directors-email" placeholder="Email Address")
-                button.btn.btn--orange(type="button")
-                  span
-                    i.glyphicon.glyphicon-plus
-                  | Add Director
-        .form
-          .row
-            label.col-md-4 URL Company Website::
-            .col-md-8
-              input.form-control(type="url", name="company-website")
-        .form
-          .row
-            label.col-md-4 Main Contact Name:
-            .col-md-8
-              .form-inline.form-main
-                .form-group
-                  input.form-control(type="text", name="main-name" placeholder="Name")
-                .form-group.form-group-title
-                  input.form-control(type="text", name="main-title" placeholder="Title/Responsibility")
-                .form-group
-                  input.form-control(type="tel", name="main-phone" placeholder="Phone Number")
-                .form-group
-                  input.form-control(type="email", name="main-email" placeholder="Email Address")
+                  select.owner-date(name="owner-date")
+                    option(value="") Date
+                    -for (var i = 1; i <= 30; i++)
+                      option(value="#{i}") #{i}
+                  select.owner-month(name="owner-month")
+                    option(value="") Month
+                    each month in months
+                      option(value="#{month}") #{month}
+                  select.owner-year(name="owner-year")
+                    option(value="") Year
+                      -for (var i = 1930; i <= 2017; i++)
+                        option(value="#{i}") #{i}
+                .form-group.form-group-labeled
+                  label Expiration Date:
+                  select.owner-date(name="owner-date")
+                    option(value="") Date
+                    -for (var i = 1; i <= 30; i++)
+                      option(value="#{i}") #{i}
+                  select.owner-month(name="owner-month")
+                    option(value="") Month
+                    each month in months
+                      option(value="#{month}") #{month}
+                  select.owner-year(name="owner-year")
+                    option(value="") Year
+                      -for (var i = 1930; i <= 2017; i++)
+                        option(value="#{i}") #{i}
+          .text-center.btn-section
+            button.btn.btn--orange.js-add-owner(type="button")
+              span
+                i.glyphicon.glyphicon-plus
+                | Add Owner
+        .text-center.btn-section
+          button.btn.btn--big REGISTER
 
-        .text-center
-          button.btn.btn--big NEXT STEP
+
+
+
+
+

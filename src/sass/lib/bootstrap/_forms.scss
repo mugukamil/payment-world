@@ -473,7 +473,7 @@ input[type="checkbox"] {
 @mixin form-inline {
 
   // Kick in the inline
-  @media (min-width: $screen-sm-min) {
+  // @media (min-width: $screen-sm-min) {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
@@ -502,7 +502,7 @@ input[type="checkbox"] {
       .form-control {
         width: auto;
       }
-    }
+    // }
 
     // Input groups need that 100% width though
     .input-group > .form-control {

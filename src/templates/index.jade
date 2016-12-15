@@ -12,13 +12,13 @@ block content
         button.btn.disabled
           i.glyphicon.glyphicon-chevron-left
       .main-nav__step
-        a.btn.btn--active Business Information
+        a(href="/").btn.btn--active Business Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a.btn Merchant Information
+        a(href="index2.html").btn Merchant Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a.main-nav__step-icon.btn Ownership Information
+        a(href="index3.html").main-nav__step-icon.btn Ownership Information
       .main-nav__right
         button.btn
           i.glyphicon.glyphicon-chevron-right
@@ -29,8 +29,8 @@ block content
           textarea#offered-products.form-control(name="offered-products" placeholder="(specify product, service or/and information)" rows="4")
         .form-inline
           .row
-            label.col-md-4 Preferred currency for Settlement:
-            .col-md-8
+            label.col-xs-4 Preferred currency for Settlement:
+            .col-xs-8
               select.js-select(name="currency-settlement")
                 option(value="") Select Currency
                 option(value="USD") USD
@@ -42,8 +42,8 @@ block content
                 | Add Currency
         .form-inline
           .row
-            label.col-md-4 In which currencies are the products offered and sold?
-            .col-md-8
+            label.col-xs-4 In which currencies are the products offered and sold?
+            .col-xs-8
               select.js-select(name="currency-product")
                 option(value="") Select Currency
                 option(value="USD") USD
@@ -55,8 +55,8 @@ block content
                 | Add Currency
         .form-inline
           .row
-            label.col-md-4 Distribution Sales Volume per Country (%)
-            .col-md-8
+            label.col-xs-4 Distribution Sales Volume per Country (%)
+            .col-xs-8
               select.select-country.js-select(name="sales-country")
                 option(value="") Select Country
                 option(value="Germany") Germany
@@ -71,8 +71,8 @@ block content
                 | Add Country
         .form-inline
           .row
-            label.col-md-4 Ticket Amount
-            .col-md-8
+            label.col-xs-4 Ticket Amount
+            .col-xs-8
               .form-group.ticket-form-group
                 label.mr8(for="ticket-amount-avg") Average
                 input#ticket-amount-avg.form-control(type="number", name="ticket-amoung-avg")
@@ -81,13 +81,13 @@ block content
                 input#ticket-amount-max.form-control(type="number", name="ticket-amoung-max")
         .form
           .row
-            label.col-md-4 Trading/Business Webpage URL:
-            .col-md-8
+            label.col-xs-4 Trading/Business Webpage URL:
+            .col-xs-8
               input.form-control(type="url", name="website-url")
         .form-inline
           .row
-            label.col-md-4 Already accepted credit cards:
-            .col-md-8
+            label.col-xs-4 Already accepted credit cards:
+            .col-xs-8
               select.select-country.js-select(name="credit-cards")
                 option(value="") Select Card
                 option(value="Visa") Visa
@@ -98,8 +98,8 @@ block content
                 | Add Card
         .form-inline
           .row
-            label.col-md-4 Other payment methods and Distribution of Sales Volume (%)
-            .col-md-8
+            label.col-xs-4 Other payment methods and Distribution of Sales Volume (%)
+            .col-xs-8
               select.select-country.js-select(name="payment-method")
                 option(value="") Select Payment Method
                 option(value="Paypal") Paypal
@@ -122,8 +122,8 @@ block content
             li.payments-list__empty
         .form
           .row
-            label.col-md-4 Former PSP and Acquirer:
-            .col-md-8
+            label.col-xs-4 Former PSP and Acquirer:
+            .col-xs-8
               input.form-control(type="text", name="psp")
       .main-form__second
         p Merchant processing history for the last 12 months: (If applicable)

@@ -12,13 +12,13 @@ block content
         button.btn.disabled
           i.glyphicon.glyphicon-chevron-left
       .main-nav__step
-        a.btn.btn--active Business Information
+        a(href="/").btn.btn--active Business Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a.btn.btn--active Merchant Information
+        a(href="index2.html").btn.btn--active Merchant Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a.main-nav__step-icon.btn Ownership Information
+        a(href="index3.html").main-nav__step-icon.btn Ownership Information
       .main-nav__right
         button.btn
           i.glyphicon.glyphicon-chevron-right
@@ -26,13 +26,13 @@ block content
       form.main-form__first
         .form
           .row
-            label.col-md-4 Registered Company Name:
-            .col-md-8
+            label.col-xs-4 Registered Company Name:
+            .col-xs-8
               input.form-control(type="text", name="company-name")
         .form
           .row
-            label.col-md-4 Type of Business:
-            .col-md-8
+            label.col-xs-4 Type of Business:
+            .col-xs-8
               label.checkbox-label
                 input.checkbox-inline(type="checkbox" name="sole-proprietor")
                 span.icon-wrap
@@ -54,8 +54,8 @@ block content
                   i.glyphicon.glyphicon-ok
                 span.checkbox-label__text Private Corporation
           .row
-            .col-md-4
-            .col-md-8
+            .col-xs-4
+            .col-xs-8
               .form-inline
                 label.checkbox-label
                   input.checkbox-inline(type="checkbox" name="other")
@@ -66,8 +66,8 @@ block content
                   input.form-control(type="text" name="other")
         .form
           .row
-            label.col-md-4 Business Address:
-            .col-md-8
+            label.col-xs-4 Business Address:
+            .col-xs-8
               .form-inline.form-addresses
                 .form-group
                   input.form-control(type="text", name="business-address" placeholder="Address")
@@ -83,8 +83,8 @@ block content
                     option(value="Spain") Spain
         .form
           .row
-            label.col-md-4 Billing Address:
-            .col-md-8
+            label.col-xs-4 Billing Address:
+            .col-xs-8
               .form-inline.form-addresses
                 .form-group
                   input.form-control(type="text", name="billing-address" placeholder="Address")
@@ -100,8 +100,8 @@ block content
                     option(value="Spain") Spain
         .form
           .row
-            label.col-md-4 Company Phone Number:
-            .col-md-8
+            label.col-xs-4 Company Phone Number:
+            .col-xs-8
               .form-inline.form-company
                 .form-group
                   input.form-control(type="tel", name="company-phone")
@@ -113,8 +113,8 @@ block content
                   input#company-vat.form-control(type="text", name="company-vat")
         .form.js-form-director
           .row
-            label.col-md-4 Director(s):
-            .col-md-8
+            label.col-xs-4 Director(s):
+            .col-xs-8
               .form-inline.form-director
                 .form-group
                   input.form-control(type="text", name="directors-name" placeholder="Name")
@@ -130,13 +130,13 @@ block content
                   | Add Director
         .form
           .row
-            label.col-md-4 URL Company Website::
-            .col-md-8
+            label.col-xs-4 URL Company Website::
+            .col-xs-8
               input.form-control(type="url", name="company-website")
         .form
           .row
-            label.col-md-4 Main Contact Name:
-            .col-md-8
+            label.col-xs-4 Main Contact Name:
+            .col-xs-8
               .form-inline.form-main
                 .form-group
                   input.form-control(type="text", name="main-name" placeholder="Name")
