@@ -6465,7 +6465,6 @@ body {
   font-family: Raleway;
   font-weight: 400;
   padding-top: 38px;
-  min-width: 1170px !important;
 }
 
 .main-header {
@@ -6474,12 +6473,13 @@ body {
 
 ul {
   list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .container {
   padding-left: 0;
   padding-right: 0;
-  width: 1130px !important;
 }
 
 .logo {
@@ -6497,10 +6497,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .main-nav__left {
+  display: inline-block;
   margin-right: 11px;
 }
 
 .main-nav__right {
+  display: inline-block;
   margin-left: 9px;
 }
 
@@ -6510,17 +6512,17 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 400;
 }
 
-.main-nav > div {
-  display: inline-block;
-}
-
 .main-nav__step-icon {
   color: #005b9f;
   margin-left: 5px;
 }
 
+.main-nav__step {
+  display: inline-block;
+}
+
 .main-nav__step .btn {
-  width: 320px;
+  width: 335px;
 }
 
 a.btn.btn--active {
@@ -6549,6 +6551,7 @@ a.btn i {
   color: #272727;
   font-size: 13px;
   height: 28px;
+  border-radius: 4px;
 }
 
 .main-form select {
@@ -6559,6 +6562,7 @@ a.btn i {
   -moz-appearance: none;
   text-indent: 0.01px;
   text-overflow: "";
+  border: none;
   /* remove arrow ie10+, but not IE9 */
   /* FF: removes outline */
   width: 270px;
@@ -6581,67 +6585,13 @@ a.btn i {
   outline: 0;
 }
 
-.main-form select.select-country {
+.main-form .select-country {
   width: 190px;
 }
 
 .main-form .form {
   margin-top: 8px;
   margin-bottom: 8px;
-}
-
-.main-form .form-inline {
-  width: 100%;
-}
-
-.main-form .form-inline span.label {
-  background-color: #06548c;
-  display: inline-block;
-  vertical-align: top;
-  color: white;
-  font-size: 15px;
-  margin-left: 7px;
-  padding: 6.5px 17px;
-  text-align: center;
-}
-
-.main-form .form-inline .text-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.main-form .form-inline + .form-inline {
-  margin-top: 8px;
-}
-
-.main-form .form-inline .input-num {
-  text-align: center;
-  width: 45px;
-  height: 28px;
-  margin-right: 3px;
-}
-
-.main-form .form-inline .label-num {
-  margin-left: 9px;
-  margin-right: 8px;
-}
-
-.main-form .ticket-form-group {
-  width: 40%;
-}
-
-.main-form .ticket-form-group:first-child {
-  margin-right: 23px;
-  width: 55%;
-}
-
-.main-form .ticket-form-group:first-child input {
-  width: 83.5%;
-}
-
-.main-form .ticket-form-group input {
-  width: 87%;
-  height: 28px;
 }
 
 .main-form__first {
@@ -6674,8 +6624,62 @@ a.btn i {
   font-size: 15px;
 }
 
+.col-ticket-1 {
+  padding-right: 0;
+}
+
+.col-ticket-2 {
+  padding-left: 0;
+}
+
+.form-inline {
+  width: 100%;
+}
+
+.form-inline .input-website {
+  width: 100%;
+}
+
+.form-inline .ticket-form-group {
+  width: 100%;
+}
+
+.form-inline .ticket-form-group input {
+  width: 71%;
+}
+
+.form-inline span.label {
+  background-color: #06548c;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  font-size: 15px;
+  margin-left: 7px;
+  padding: 6.5px 17px;
+  text-align: center;
+}
+
+.form-inline + .form-inline {
+  margin-top: 8px;
+}
+
+.form-inline .input-num {
+  text-align: center;
+  width: 45px;
+  height: 28px;
+  margin-right: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.form-inline .label-num {
+  margin-left: 9px;
+  margin-right: 8px;
+}
+
 .payments-list {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .payments-list__empty {
@@ -6728,23 +6732,16 @@ a.btn i {
   background-color: white;
   border-radius: 4px;
   vertical-align: top;
-  text-align: center;
   margin-top: 8px;
-  margin-left: 8px;
-}
-
-.payments-list li:first-child {
-  margin-left: 0;
-}
-
-.payments-list li:nth-child(13) {
-  margin-left: 0;
+  margin-right: 8px;
 }
 
 .table input {
   background-color: white;
   border-radius: 4px;
   border: none;
+  width: 100%;
+  padding: 5px;
 }
 
 .table thead th {
@@ -6760,6 +6757,7 @@ a.btn i {
   color: white;
   font-size: 15px;
   border-top: none;
+  padding: 5px;
 }
 
 .form-file {
@@ -6815,14 +6813,11 @@ a.btn i {
 
 .checkbox-label {
   cursor: pointer;
+  margin-right: 15px;
 }
 
 .checkbox-label + .form-group {
   margin-left: 8px;
-}
-
-.checkbox-label + .checkbox-label {
-  margin-left: 15px;
 }
 
 .checkbox-label__text {
@@ -6894,7 +6889,7 @@ a.btn i {
   width: 115px;
 }
 
-.form-addresses .form-group:last-child select {
+.form-addresses .form-group select {
   width: 207px;
 }
 
@@ -6982,7 +6977,7 @@ a.btn i {
 }
 
 .form-passport .form-group:last-child input {
-  width: 240px;
+  width: 250px;
 }
 
 .assuming-form .owner-date {
@@ -7022,47 +7017,6 @@ a.btn i {
   margin-top: 10px;
 }
 
-@media screen and (min-width: 768px){
-  .jumbotron{
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .container .jumbotron,
-  .container-fluid .jumbotron{
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  .jumbotron h1,
-  .jumbotron .h1{
-    font-size: 63px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next{
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev{
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next{
-    margin-right: -10px;
-  }
-  .carousel-caption{
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators{
-    bottom: 20px;
-  }
-}
-
 @media (min-width: 768px){
   .lead{
     font-size: 21px;
@@ -7080,7 +7034,7 @@ a.btn i {
     margin-left: 180px;
   }
   .container{
-    width: 750px;
+    width: 100%;
   }
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
     float: left;
@@ -7366,6 +7320,47 @@ a.btn i {
   }
   .modal-sm{
     width: 300px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .jumbotron{
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .jumbotron,
+  .container-fluid .jumbotron{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .jumbotron h1,
+  .jumbotron .h1{
+    font-size: 63px;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next{
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    font-size: 30px;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .icon-prev{
+    margin-left: -10px;
+  }
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-next{
+    margin-right: -10px;
+  }
+  .carousel-caption{
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
+  .carousel-indicators{
+    bottom: 20px;
   }
 }
 
@@ -7721,13 +7716,6 @@ a.btn i {
   }
 }
 
-@media (max-device-width: 480px) and (orientation: landscape){
-  .navbar-fixed-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse{
-    max-height: 200px;
-  }
-}
-
 @media (min-width: 992px) and (max-width: 1199px){
   .visible-md{
     display: block !important;
@@ -7753,6 +7741,153 @@ a.btn i {
   }
   .hidden-md{
     display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .visible-sm{
+    display: block !important;
+  }
+  table.visible-sm{
+    display: table !important;
+  }
+  tr.visible-sm{
+    display: table-row !important;
+  }
+  th.visible-sm,
+  td.visible-sm{
+    display: table-cell !important;
+  }
+  .visible-sm-block{
+    display: block !important;
+  }
+  .visible-sm-inline{
+    display: inline !important;
+  }
+  .visible-sm-inline-block{
+    display: inline-block !important;
+  }
+  .hidden-sm{
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1199px){
+  .main-nav__step .btn{
+    width: 270px;
+  }
+  .payments-list li{
+    width: 64px;
+    height: 64px;
+  }
+  .form-addresses .form-group:first-child input{
+    width: 150px;
+  }
+  .form-addresses .form-group:nth-child(2) input{
+    width: 130px;
+  }
+  .form-addresses .form-group:nth-child(3) input{
+    width: 100px;
+  }
+  .form-addresses .form-group select{
+    width: 160px;
+  }
+  .date-form .form-group-labeled:last-child{
+    margin-left: 10px;
+  }
+  .date-form .form-group-labeled:last-child input{
+    width: 200px;
+  }
+  .date-form .owner-date{
+    width: 70px;
+  }
+  .date-form .owner-month{
+    width: 70px;
+  }
+  .date-form .owner-year{
+    width: 60px;
+  }
+  .main-form-first .form-group input{
+    width: 150px;
+  }
+  .main-form-first .form-group-labeled input{
+    width: 130px;
+  }
+  .form-passport .form-group input{
+    width: 200px;
+  }
+  .form-passport .form-group:last-child input{
+    width: 130px;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .main-form select{
+    width: 195px;
+  }
+  .main-form .select-country{
+    width: 130px;
+  }
+  .main-form__first label{
+    font-size: 14px;
+  }
+  .form-inline span.label{
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 3px;
+  }
+  .form-inline .input-num{
+    width: 35px;
+  }
+  .form-inline .label-num{
+    margin-left: 5px;
+  }
+  .btn--orange{
+    font-size: 12px;
+    width: 115px;
+    padding-left: 4px;
+  }
+  .date-form .form-group-labeled:last-child input{
+    width: 130px;
+  }
+  .main-form-first .form-group input{
+    width: 120px;
+  }
+  .assuming-form .form-group label{
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .assuming-form .owner-date{
+    width: 55px;
+  }
+  .assuming-form .owner-year{
+    width: 54px;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .main-nav__step .btn{
+    width: 190px;
+  }
+}
+
+@media only screen and (max-width: 990px){
+  .form-addresses .form-group:first-child input{
+    width: 100px;
+  }
+  .form-addresses .form-group:nth-child(2) input{
+    width: 120px;
+  }
+  .form-addresses .form-group select{
+    width: 135px;
+  }
+}
+
+@media only screen and (max-width: 670px){
+  .main-nav__step .btn{
+    width: 150px;
+    font-size: 12px;
   }
 }
 
@@ -7848,34 +7983,6 @@ a.btn i {
     display: inline-block !important;
   }
   .hidden-print{
-    display: none !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px){
-  .visible-sm{
-    display: block !important;
-  }
-  table.visible-sm{
-    display: table !important;
-  }
-  tr.visible-sm{
-    display: table-row !important;
-  }
-  th.visible-sm,
-  td.visible-sm{
-    display: table-cell !important;
-  }
-  .visible-sm-block{
-    display: block !important;
-  }
-  .visible-sm-inline{
-    display: inline !important;
-  }
-  .visible-sm-inline-block{
-    display: inline-block !important;
-  }
-  .hidden-sm{
     display: none !important;
   }
 }
@@ -7996,13 +8103,154 @@ a.btn i {
   }
 }
 
+@media only screen and (max-width: 767px){
+  .main-form{
+    text-align: center;
+  }
+  .main-form .select-country{
+    width: 100%;
+  }
+  .main-form__first label{
+    font-size: 15px;
+  }
+  .main-form__second{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .form-inline span.label{
+    font-size: 15px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .form-inline + .form-inline{
+    margin-top: 30px;
+  }
+  .form-inline{
+    text-align: center;
+  }
+  .form-inline .form-control{
+    width: 100%;
+  }
+  .form-inline select{
+    width: 100%;
+  }
+  .form-inline .btn--orange{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .form-inline .label{
+    margin-top: 10px;
+  }
+  .form-inline .label-num{
+    margin-top: 5px;
+  }
+  .form-inline .ticket-form-group{
+    width: 95%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-inline .ticket-form-group input{
+    width: 100%;
+  }
+  .payments-list li{
+    margin-right: 0;
+  }
+  .table input{
+    height: 24px;
+  }
+  .table td, .table th{
+    font-size: 13px;
+    padding: 3px !important;
+  }
+  .btn--orange{
+    font-size: 13px;
+  }
+  .checkbox-label{
+    margin-right: 5px;
+  }
+  .form-inline .form-group + .form-group{
+    margin-left: 0;
+  }
+  .form-inline .form-group + .form-group-labeled{
+    margin-left: 0;
+  }
+  .form-company .form-group{
+    width: 100%;
+    margin-top: 5px;
+  }
+  .form-company .form-group input{
+    width: 100%;
+  }
+  .form-company .form-group:last-child input{
+    width: 100%;
+  }
+  .form-director .form-group:nth-child(1) input{
+    width: 100%;
+  }
+  .form-director .form-group{
+    width: 100%;
+  }
+  .form-director .form-group + .form-group{
+    margin-top: 10px;
+  }
+  .form-director .form-group input{
+    width: 100%;
+  }
+  .form-main .form-group-title input{
+    width: 100%;
+  }
+  .form-main .form-group{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .form-main .form-group:first-child input{
+    width: 100%;
+  }
+  .form-main .form-group:last-child input{
+    width: 100%;
+  }
+  .date-form .form-group{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .date-form .owner-date{
+    width: 100%;
+  }
+  .date-form .owner-month{
+    width: 100%;
+  }
+  .date-form .owner-year{
+    width: 100%;
+  }
+  .main-form-first .form-group{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .main-form-first .form-group input{
+    width: 100%;
+  }
+  .form-passport .form-group{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .form-passport .form-group input{
+    width: 100%;
+  }
+  .assuming-form select{
+    margin-bottom: 10px;
+  }
+  .index2 .form{
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 767px){
   .table-responsive{
     width: 100%;
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
   }
   .table-responsive > .table{
     margin-bottom: 0;
@@ -8039,6 +8287,13 @@ a.btn i {
   .table-responsive > .table-bordered > tfoot > tr:last-child > th,
   .table-responsive > .table-bordered > tfoot > tr:last-child > td{
     border-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 729px){
+  .main-nav__step .btn{
+    width: 170px;
+    font-size: 14px;
   }
 }
 
@@ -8096,6 +8351,62 @@ a.btn i {
   .input-group-lg
   input[type="month"]{
     line-height: 46px;
+  }
+}
+
+@media (max-device-width: 480px) and (orientation: landscape){
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse{
+    max-height: 200px;
+  }
+}
+
+@media only screen and (max-width: 608px){
+  .main-nav__left{
+    display: none;
+  }
+  .main-nav__right{
+    display: none;
+  }
+  .main-nav__step-icon{
+    margin-left: 0;
+    display: none;
+  }
+  .main-nav__step .btn{
+    width: 140px;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .table td, .table th{
+    font-size: 11px;
+    padding: 2px !important;
+  }
+  .form-typeof-business{
+    text-align: justify;
+  }
+  .form-addresses .form-group:first-child input{
+    width: 80px;
+  }
+  .form-addresses .form-group:nth-child(2) input{
+    width: 80px;
+  }
+  .form-addresses .form-group:nth-child(3) input{
+    width: 80px;
+  }
+  .form-addresses .form-group select{
+    width: 100px;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 428px){
+  .main-nav__step .btn{
+    width: 128px;
+    font-size: 11px;
+    padding-left: 5px;
   }
 }
 

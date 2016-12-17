@@ -263,7 +263,7 @@
   @if $letter-spacing != null
     letter-spacing: ($letter-spacing / 1000) + em
 
-@mixin custom-select-reset
+=custom-select-reset
   /******************************/
   /* reset native select styles */
   outline: 0
@@ -271,6 +271,7 @@
   -moz-appearance: none  /* Removes default style Firefox */
   text-indent: 0.01px /* FF: Removes default arrow */
   text-overflow: '' /* FF: Removes default arrow */
+  border: none
 
   /* remove arrow ie10+, but not IE9 */
   &::-ms-expand

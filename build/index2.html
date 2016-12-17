@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Payment World</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -16,23 +17,23 @@
       <header class="main-header text-center">
         <a href="#" class="logo"><img src="img/logo.png" alt="payment world"></a>
       </header>
-      <nav class="main-nav">
-        <div class="main-nav__left"><button class="btn disabled"><i class="glyphicon glyphicon-chevron-left"></i></button></div>
+      <nav class="main-nav text-center">
+        <div class="main-nav__left"><a href="/" class="btn"><i class="glyphicon glyphicon-chevron-left"></i></a></div>
         <div class="main-nav__step"><a href="/" class="btn btn--active">Business Information</a><i class="main-nav__step-icon glyphicon glyphicon-chevron-right"></i></div>
-        <div class="main-nav__step"><a href="index2.html" class="btn btn--active">Merchant Information</a><i class="main-nav__step-icon glyphicon glyphicon-chevron-right"></i></div>
-        <div class="main-nav__step"><a href="index3.html" class="main-nav__step-icon btn">Ownership Information</a></div>
-        <div class="main-nav__right"><button class="btn"><i class="glyphicon glyphicon-chevron-right"></i></button></div>
+        <div class="main-nav__step"><a href="index2.php" class="btn btn--active">Merchant Information</a><i class="main-nav__step-icon glyphicon glyphicon-chevron-right"></i></div>
+        <div class="main-nav__step"><a href="index3.php" class="main-nav__step btn">Ownership Information</a></div>
+        <div class="main-nav__right"><a href="index3.php" class="btn"><i class="glyphicon glyphicon-chevron-right"></i></a></div>
       </nav>
-      <div class="main-form">
-        <form class="main-form__first">
+      <div class="main-form index2">
+        <form method="post" class="main-form__first">
           <div class="form">
-            <div class="row"><label class="col-xs-4">Registered Company Name:</label>
-              <div class="col-xs-8"><input type="text" name="company-name" class="form-control"></div>
+            <div class="row"><label class="col-xs-12 col-sm-4">Registered Company Name:</label>
+              <div class="col-xs-12 col-sm-8"><input type="text" name="company-name" class="form-control"></div>
             </div>
           </div>
           <div class="form">
-            <div class="row"><label class="col-xs-4">Type of Business:</label>
-              <div class="col-xs-8"><label class="checkbox-label"><input type="checkbox" name="sole-proprietor" class="checkbox-inline"><span class="icon-wrap"><i class="glyphicon glyphicon-ok"></i></span><span class="checkbox-label__text">Sole Proprietor</span></label>
+            <div class="row"><label class="col-xs-12 col-sm-4">Type of Business:</label>
+              <div class="col-xs-12 col-sm-8 form-typeof-business"><label class="checkbox-label"><input type="checkbox" name="sole-proprietor" class="checkbox-inline"><span class="icon-wrap"><i class="glyphicon glyphicon-ok"></i></span><span class="checkbox-label__text">Sole Proprietor</span></label>
                 <label
                   class="checkbox-label"><input type="checkbox" name="lim-liability" class="checkbox-inline"><span class="icon-wrap"><i class="glyphicon glyphicon-ok"></i></span><span class="checkbox-label__text">Limited Liability Comp.</span></label><label class="checkbox-label"><input type="checkbox" name="pub-lim-comp" class="checkbox-inline"><span class="icon-wrap"><i class="glyphicon glyphicon-ok"></i></span><span class="checkbox-label__text">Public Limited Comp.</span></label>
                   <label
@@ -40,17 +41,17 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-4"></div>
-              <div class="col-xs-8">
-                <div class="form-inline"><label class="checkbox-label"><input type="checkbox" name="other" class="checkbox-inline"><span class="icon-wrap"><i class="glyphicon glyphicon-ok"></i></span><span class="checkbox-label__text">Other</span></label>
+              <div class="col-xs-12 col-sm-4"></div>
+              <div class="col-xs-12 col-sm-8">
+                <div class="form-inline form-typeof-business"><label class="checkbox-label"><input type="checkbox" name="other" class="checkbox-inline"><span class="icon-wrap"><i class="glyphicon glyphicon-ok"></i></span><span class="checkbox-label__text">Other</span></label>
                   <div class="form-group"><input type="text" name="other" class="form-control"></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="form">
-            <div class="row"><label class="col-xs-4">Business Address:</label>
-              <div class="col-xs-8">
+            <div class="row"><label class="col-xs-12 col-sm-4">Business Address:</label>
+              <div class="col-xs-12 col-sm-8">
                 <div class="form-inline form-addresses">
                   <div class="form-group"><input type="text" name="business-address" placeholder="Address" class="form-control"></div>
                   <div class="form-group"><input type="text" name="business-city" placeholder="City" class="form-control"></div>
@@ -61,8 +62,8 @@
             </div>
           </div>
           <div class="form">
-            <div class="row"><label class="col-xs-4">Billing Address:</label>
-              <div class="col-xs-8">
+            <div class="row"><label class="col-xs-12 col-sm-4">Billing Address:</label>
+              <div class="col-xs-12 col-sm-8">
                 <div class="form-inline form-addresses">
                   <div class="form-group"><input type="text" name="billing-address" placeholder="Address" class="form-control"></div>
                   <div class="form-group"><input type="text" name="billing-city" placeholder="City" class="form-control"></div>
@@ -73,8 +74,8 @@
             </div>
           </div>
           <div class="form">
-            <div class="row"><label class="col-xs-4">Company Phone Number:</label>
-              <div class="col-xs-8">
+            <div class="row"><label class="col-xs-12 col-sm-4">Company Phone Number:</label>
+              <div class="col-xs-12 col-sm-8">
                 <div class="form-inline form-company">
                   <div class="form-group"><input type="tel" name="company-phone" class="form-control"></div>
                   <div class="form-group"><label for="company-fax">FAX:</label><input id="company-fax" type="text" name="company-fax" class="form-control"></div>
@@ -84,8 +85,8 @@
             </div>
           </div>
           <div class="form js-form-director">
-            <div class="row"><label class="col-xs-4">Director(s):</label>
-              <div class="col-xs-8">
+            <div class="row"><label class="col-xs-12 col-sm-4">Director(s):</label>
+              <div class="col-xs-12 col-sm-8">
                 <div class="form-inline form-director">
                   <div class="form-group"><input type="text" name="directors-name" placeholder="Name" class="form-control"></div>
                   <div class="form-group form-group-title"><input type="text" name="directors-title" placeholder="Title/Responsibility" class="form-control"></div>
@@ -95,13 +96,13 @@
             </div>
           </div>
           <div class="form">
-            <div class="row"><label class="col-xs-4">URL Company Website::</label>
-              <div class="col-xs-8"><input type="url" name="company-website" class="form-control"></div>
+            <div class="row"><label class="col-xs-12 col-sm-4">URL Company Website::</label>
+              <div class="col-xs-12 col-sm-8"><input type="url" name="company-website" class="form-control"></div>
             </div>
           </div>
           <div class="form">
-            <div class="row"><label class="col-xs-4">Main Contact Name:</label>
-              <div class="col-xs-8">
+            <div class="row"><label class="col-xs-12 col-sm-4">Main Contact Name:</label>
+              <div class="col-xs-12 col-sm-8">
                 <div class="form-inline form-main">
                   <div class="form-group"><input type="text" name="main-name" placeholder="Name" class="form-control"></div>
                   <div class="form-group form-group-title"><input type="text" name="main-title" placeholder="Title/Responsibility" class="form-control"></div>

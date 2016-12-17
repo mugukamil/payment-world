@@ -7,28 +7,28 @@ block content
     header.main-header.text-center
       a.logo(href='#')
         img(src="img/logo.png", alt="payment world")
-    nav.main-nav
+    nav.main-nav.text-center
       .main-nav__left
-        button.btn.disabled
+        a(href="index2.php").btn
           i.glyphicon.glyphicon-chevron-left
       .main-nav__step
         a(href="/").btn.btn--active Business Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a(href="index2.html").btn.btn--active Merchant Information
+        a(href="index2.php").btn.btn--active Merchant Information
         i.main-nav__step-icon.glyphicon.glyphicon-chevron-right
       .main-nav__step
-        a(href="index3.html").main-nav__step-icon.btn.btn--active Ownership Information
+        a(href="index3.php").main-nav__step.btn.btn--active Ownership Information
       .main-nav__right
-        button.btn
+        button.btn.disabled
           i.glyphicon.glyphicon-chevron-right
     .main-form
-      form
+      form(method="post")
         .main-form__first.index3
           .form-inline
             .row
-              label.col-xs-4 Principal (First Name, Last Name):
-              .col-xs-8.main-form-first
+              label.col-xs-12.col-sm-4 Principal (First Name, Last Name):
+              .col-xs-12.col-sm-8.main-form-first
                 .form-group
                   input.form-control(type="text", name="owner-firstname" placeholder="First Name")
                 .form-group
@@ -39,31 +39,31 @@ block content
           .form-inline.date-form
             - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
             .row
-              label.col-xs-4 Date and Place of Birth:
-              .col-xs-8
+              label.col-xs-12.col-sm-4 Date and Place of Birth:
+              .col-xs-12.col-sm-8
                 .form-group
                   select.owner-date(name="owner-date")
                     option(value="") Date
                     -for (var i = 1; i <= 30; i++)
                       option(value="#{i}") #{i}
-                  .form-group
-                    select.owner-month(name="owner-month")
-                      option(value="") Month
-                      each month in months
-                        option(value="#{month}") #{month}
-                  .form-group
-                    select.owner-year(name="owner-year")
-                      option(value="") Year
-                        -for (var i = 1930; i <= 2017; i++)
-                          option(value="#{i}") #{i}
+                .form-group
+                  select.owner-month(name="owner-month")
+                    option(value="") Month
+                    each month in months
+                      option(value="#{month}") #{month}
+                .form-group
+                  select.owner-year(name="owner-year")
+                    option(value="") Year
+                      -for (var i = 1930; i <= 2017; i++)
+                        option(value="#{i}") #{i}
                 .form-group.form-group-labeled
                   label(for="owner-ownership") Ownership
                   input.form-control(type="text")
                   span %
           .form
             .row
-              label.col-xs-4 Owner Address:
-              .col-xs-8
+              label.col-xs-12.col-sm-4 Owner Address:
+              .col-xs-12.col-sm-8
                 .form-inline.form-addresses
                   .form-group
                     input.form-control(type="text", name="owner-address" placeholder="Address")
@@ -79,8 +79,8 @@ block content
                       option(value="Spain") Spain
           .form
             .row
-              label.col-xs-4 Passport / ID Number:
-              .col-xs-8
+              label.col-xs-12.col-sm-4 Passport / ID Number:
+              .col-xs-12.col-sm-8
                 .form-inline.form-passport
                   .form-group
                     input.form-control(type="text", name="owner-passport")
@@ -90,8 +90,8 @@ block content
           .form-inline.date-form.assuming-form
             - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
             .row
-              label.col-xs-4 Issuing Date:
-              .col-xs-8
+              label.col-xs-12.col-sm-4 Issuing Date:
+              .col-xs-12.col-sm-8
                 .form-group
                   select.owner-date(name="owner-date")
                     option(value="") Date

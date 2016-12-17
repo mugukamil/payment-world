@@ -13,12 +13,11 @@ jQuery(document).ready(function($) {
         $formDirector = $('.js-form-director'),
         $index3form = $('.main-form__first.index3');
 
-    $jsSelect.next('.btn--orange').on('click', function(e) {
-        e.preventDefault();
-        var $this = $(this),
-            $jsSel = $(this).siblings('.js-select');
+    $jsSelect.next('.js-button').on('click', function() {
+        var $jsSel = $(this).siblings('.js-select');
+
         if ($jsSel.val().length) {
-            $this.after('<span class="label label-default">' + $jsSel.val() + '</span>');
+            $(this).after('<span class="label label-default">' + $jsSel.val() + '</span>');
         }
     });
     $inputNumWrap.next('.btn--orange').on('click', function(e) {
