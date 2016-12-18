@@ -1,5 +1,6 @@
 ---
 title: Payment World
+pays: ['VISA', 'Mastercard', 'Diners', 'Discover', 'ChinaUnionPay', 'QIWI', 'Przlewsy24', 'TrustPay', 'POLI', 'JCB', 'Paysafecard', 'Paypal', 'Giropay', 'Skrill', 'iDeal', 'KlarnaSofort', 'Klarna', 'SEPA', 'Paymentworld', 'Boleto', 'OXXO', 'Pago', 'Rapipango', 'ServiPag']
 ---
 extends layouts/_layout
 block content
@@ -22,8 +23,8 @@ block content
       .main-nav__right
         a(href="index2.php").btn
           i.glyphicon.glyphicon-chevron-right
-    .main-form
-      form(method="post").main-form__first
+    form.main-form(method="post")
+      .main-form__first
         .form-group
           label(for="offered-products") Offered products and services:
           textarea#offered-products.form-control(name="offered-products" placeholder="(specify product, service or/and information)" rows="4")
@@ -115,12 +116,11 @@ block content
         .form
           label In which other payment methods would the company be interested to offer?
           ul.payments-list
-            -for (var i = 1; i <= 22; i++)
+            each pay in pays
               li
-                div.payments-list__img-wrap
-                  img(src="img/payments/#{i}.png", alt="payment")
-            li.payments-list__empty
-            li.payments-list__empty
+                input(id="#{pay}-check" type="checkbox" value="#{pay}" name="payment-method")
+                label.payments-list__img-wrap(for="#{pay}-check")
+                  img(src="img/payments/#{pay}.jpg", alt="payment")
         .form
           .row
             label.col-xs-12.col-sm-4 Former PSP and Acquirer:
@@ -129,32 +129,31 @@ block content
       .main-form__second
         p Merchant processing history for the last 12 months: (If applicable)
         - ths = ['Sales Volume', 'No. of Transactions', 'Chargeback Volume', 'No. of Chargebacks','Refunds Volume', 'No. of Refunds']
-        form
-          table.table
-            thead
+        table.table
+          thead
+            tr
+              th
+              each th in ths
+                th #{th}
+          tbody
+            tr
+              td Last Month
+              each th in ths
+                td
+                  input(type="text" name="#{th.replace(/\s+/g, '-').replace(/\./g, '').toLowerCase()}")
+            -for (var i = 2; i <= 12; i++)
               tr
-                th
-                each th in ths
-                  th #{th}
-            tbody
-              tr
-                td Last Month
+                th(scope="row") Month #{i}
                 each th in ths
                   td
-                    input(type="text" name="#{th.replace(/\s+/g, '-').replace(/\./g, '').toLowerCase()}")
-              -for (var i = 2; i <= 12; i++)
-                tr
-                  th(scope="row") Month #{i}
-                  each th in ths
-                    td
-                      input(type="text" name="#{th.replace(/\s+/g, '-').replace(/\./g, '').toLowerCase()}#{i}")
-          .form-inline.form-file
-            span Alternatively the processing history can be uploade as pdf document
-            label
-              button.btn.btn--orange(type="button")
-                span
-                  i.glyphicon.glyphicon-plus
-                | Upload PDF
-              input(type="file" name="upload-pdf")
-          .text-center
-            button.btn.btn--big NEXT STEP
+                    input(type="text" name="#{th.replace(/\s+/g, '-').replace(/\./g, '').toLowerCase()}#{i}")
+        .form-inline.form-file
+          span Alternatively the processing history can be uploade as pdf document
+          label
+            button.btn.btn--orange(type="button")
+              span
+                i.glyphicon.glyphicon-plus
+              | Upload PDF
+            input(type="file" name="upload-pdf")
+        .text-center
+          button.btn.btn--big NEXT STEP

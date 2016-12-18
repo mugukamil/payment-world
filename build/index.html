@@ -24,8 +24,8 @@
         <div class="main-nav__step"><a href="index3.php" class="main-nav__step btn">Ownership Information</a></div>
         <div class="main-nav__right"><a href="index2.php" class="btn"><i class="glyphicon glyphicon-chevron-right"></i></a></div>
       </nav>
-      <div class="main-form">
-        <form method="post" class="main-form__first">
+      <form method="post" class="main-form">
+        <div class="main-form__first">
           <div class="form-group"><label for="offered-products">Offered products and services:</label><textarea id="offered-products" name="offered-products" placeholder="(specify product, service or/and information)" rows="4" class="form-control"></textarea></div>
           <div class="form-inline">
             <div class="row"><label class="col-xs-12 col-sm-4">Preferred currency for Settlement:</label>
@@ -71,74 +71,30 @@
           </div>
           <div class="form"><label>In which other payment methods would the company be interested to offer?</label>
             <ul class="payments-list">
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/1.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/2.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/3.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/4.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/5.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/6.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/7.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/8.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/9.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/10.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/11.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/12.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/13.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/14.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/15.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/16.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/17.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/18.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/19.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/20.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/21.png" alt="payment"></div>
-              </li>
-              <li>
-                <div class="payments-list__img-wrap"><img src="img/payments/22.png" alt="payment"></div>
-              </li>
-              <li class="payments-list__empty"></li>
-              <li class="payments-list__empty"></li>
+              <li><input id="VISA-check" type="checkbox" value="VISA" name="payment-method"><label for="VISA-check" class="payments-list__img-wrap"><img src="img/payments/VISA.jpg" alt="payment"></label></li>
+              <li><input id="Mastercard-check" type="checkbox" value="Mastercard" name="payment-method"><label for="Mastercard-check" class="payments-list__img-wrap"><img src="img/payments/Mastercard.jpg" alt="payment"></label></li>
+              <li><input id="Diners-check" type="checkbox" value="Diners" name="payment-method"><label for="Diners-check" class="payments-list__img-wrap"><img src="img/payments/Diners.jpg" alt="payment"></label></li>
+              <li><input id="Discover-check" type="checkbox" value="Discover" name="payment-method"><label for="Discover-check" class="payments-list__img-wrap"><img src="img/payments/Discover.jpg" alt="payment"></label></li>
+              <li><input id="ChinaUnionPay-check" type="checkbox" value="ChinaUnionPay" name="payment-method"><label for="ChinaUnionPay-check" class="payments-list__img-wrap"><img src="img/payments/ChinaUnionPay.jpg" alt="payment"></label></li>
+              <li><input id="QIWI-check" type="checkbox" value="QIWI" name="payment-method"><label for="QIWI-check" class="payments-list__img-wrap"><img src="img/payments/QIWI.jpg" alt="payment"></label></li>
+              <li><input id="Przlewsy24-check" type="checkbox" value="Przlewsy24" name="payment-method"><label for="Przlewsy24-check" class="payments-list__img-wrap"><img src="img/payments/Przlewsy24.jpg" alt="payment"></label></li>
+              <li><input id="TrustPay-check" type="checkbox" value="TrustPay" name="payment-method"><label for="TrustPay-check" class="payments-list__img-wrap"><img src="img/payments/TrustPay.jpg" alt="payment"></label></li>
+              <li><input id="POLI-check" type="checkbox" value="POLI" name="payment-method"><label for="POLI-check" class="payments-list__img-wrap"><img src="img/payments/POLI.jpg" alt="payment"></label></li>
+              <li><input id="JCB-check" type="checkbox" value="JCB" name="payment-method"><label for="JCB-check" class="payments-list__img-wrap"><img src="img/payments/JCB.jpg" alt="payment"></label></li>
+              <li><input id="Paysafecard-check" type="checkbox" value="Paysafecard" name="payment-method"><label for="Paysafecard-check" class="payments-list__img-wrap"><img src="img/payments/Paysafecard.jpg" alt="payment"></label></li>
+              <li><input id="Paypal-check" type="checkbox" value="Paypal" name="payment-method"><label for="Paypal-check" class="payments-list__img-wrap"><img src="img/payments/Paypal.jpg" alt="payment"></label></li>
+              <li><input id="Giropay-check" type="checkbox" value="Giropay" name="payment-method"><label for="Giropay-check" class="payments-list__img-wrap"><img src="img/payments/Giropay.jpg" alt="payment"></label></li>
+              <li><input id="Skrill-check" type="checkbox" value="Skrill" name="payment-method"><label for="Skrill-check" class="payments-list__img-wrap"><img src="img/payments/Skrill.jpg" alt="payment"></label></li>
+              <li><input id="iDeal-check" type="checkbox" value="iDeal" name="payment-method"><label for="iDeal-check" class="payments-list__img-wrap"><img src="img/payments/iDeal.jpg" alt="payment"></label></li>
+              <li><input id="KlarnaSofort-check" type="checkbox" value="KlarnaSofort" name="payment-method"><label for="KlarnaSofort-check" class="payments-list__img-wrap"><img src="img/payments/KlarnaSofort.jpg" alt="payment"></label></li>
+              <li><input id="Klarna-check" type="checkbox" value="Klarna" name="payment-method"><label for="Klarna-check" class="payments-list__img-wrap"><img src="img/payments/Klarna.jpg" alt="payment"></label></li>
+              <li><input id="SEPA-check" type="checkbox" value="SEPA" name="payment-method"><label for="SEPA-check" class="payments-list__img-wrap"><img src="img/payments/SEPA.jpg" alt="payment"></label></li>
+              <li><input id="Paymentworld-check" type="checkbox" value="Paymentworld" name="payment-method"><label for="Paymentworld-check" class="payments-list__img-wrap"><img src="img/payments/Paymentworld.jpg" alt="payment"></label></li>
+              <li><input id="Boleto-check" type="checkbox" value="Boleto" name="payment-method"><label for="Boleto-check" class="payments-list__img-wrap"><img src="img/payments/Boleto.jpg" alt="payment"></label></li>
+              <li><input id="OXXO-check" type="checkbox" value="OXXO" name="payment-method"><label for="OXXO-check" class="payments-list__img-wrap"><img src="img/payments/OXXO.jpg" alt="payment"></label></li>
+              <li><input id="Pago-check" type="checkbox" value="Pago" name="payment-method"><label for="Pago-check" class="payments-list__img-wrap"><img src="img/payments/Pago.jpg" alt="payment"></label></li>
+              <li><input id="Rapipango-check" type="checkbox" value="Rapipango" name="payment-method"><label for="Rapipango-check" class="payments-list__img-wrap"><img src="img/payments/Rapipango.jpg" alt="payment"></label></li>
+              <li><input id="ServiPag-check" type="checkbox" value="ServiPag" name="payment-method"><label for="ServiPag-check" class="payments-list__img-wrap"><img src="img/payments/ServiPag.jpg" alt="payment"></label></li>
             </ul>
           </div>
           <div class="form">
@@ -146,139 +102,137 @@
               <div class="col-xs-12 col-sm-8"><input type="text" name="psp" class="form-control"></div>
             </div>
           </div>
-        </form>
+        </div>
         <div class="main-form__second">
           <p>Merchant processing history for the last 12 months: (If applicable)</p>
-          <form>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Sales Volume</th>
-                  <th>No. of Transactions</th>
-                  <th>Chargeback Volume</th>
-                  <th>No. of Chargebacks</th>
-                  <th>Refunds Volume</th>
-                  <th>No. of Refunds</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Last Month</td>
-                  <td><input type="text" name="sales-volume"></td>
-                  <td><input type="text" name="no-of-transactions"></td>
-                  <td><input type="text" name="chargeback-volume"></td>
-                  <td><input type="text" name="no-of-chargebacks"></td>
-                  <td><input type="text" name="refunds-volume"></td>
-                  <td><input type="text" name="no-of-refunds"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 2</th>
-                  <td><input type="text" name="sales-volume2"></td>
-                  <td><input type="text" name="no-of-transactions2"></td>
-                  <td><input type="text" name="chargeback-volume2"></td>
-                  <td><input type="text" name="no-of-chargebacks2"></td>
-                  <td><input type="text" name="refunds-volume2"></td>
-                  <td><input type="text" name="no-of-refunds2"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 3</th>
-                  <td><input type="text" name="sales-volume3"></td>
-                  <td><input type="text" name="no-of-transactions3"></td>
-                  <td><input type="text" name="chargeback-volume3"></td>
-                  <td><input type="text" name="no-of-chargebacks3"></td>
-                  <td><input type="text" name="refunds-volume3"></td>
-                  <td><input type="text" name="no-of-refunds3"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 4</th>
-                  <td><input type="text" name="sales-volume4"></td>
-                  <td><input type="text" name="no-of-transactions4"></td>
-                  <td><input type="text" name="chargeback-volume4"></td>
-                  <td><input type="text" name="no-of-chargebacks4"></td>
-                  <td><input type="text" name="refunds-volume4"></td>
-                  <td><input type="text" name="no-of-refunds4"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 5</th>
-                  <td><input type="text" name="sales-volume5"></td>
-                  <td><input type="text" name="no-of-transactions5"></td>
-                  <td><input type="text" name="chargeback-volume5"></td>
-                  <td><input type="text" name="no-of-chargebacks5"></td>
-                  <td><input type="text" name="refunds-volume5"></td>
-                  <td><input type="text" name="no-of-refunds5"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 6</th>
-                  <td><input type="text" name="sales-volume6"></td>
-                  <td><input type="text" name="no-of-transactions6"></td>
-                  <td><input type="text" name="chargeback-volume6"></td>
-                  <td><input type="text" name="no-of-chargebacks6"></td>
-                  <td><input type="text" name="refunds-volume6"></td>
-                  <td><input type="text" name="no-of-refunds6"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 7</th>
-                  <td><input type="text" name="sales-volume7"></td>
-                  <td><input type="text" name="no-of-transactions7"></td>
-                  <td><input type="text" name="chargeback-volume7"></td>
-                  <td><input type="text" name="no-of-chargebacks7"></td>
-                  <td><input type="text" name="refunds-volume7"></td>
-                  <td><input type="text" name="no-of-refunds7"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 8</th>
-                  <td><input type="text" name="sales-volume8"></td>
-                  <td><input type="text" name="no-of-transactions8"></td>
-                  <td><input type="text" name="chargeback-volume8"></td>
-                  <td><input type="text" name="no-of-chargebacks8"></td>
-                  <td><input type="text" name="refunds-volume8"></td>
-                  <td><input type="text" name="no-of-refunds8"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 9</th>
-                  <td><input type="text" name="sales-volume9"></td>
-                  <td><input type="text" name="no-of-transactions9"></td>
-                  <td><input type="text" name="chargeback-volume9"></td>
-                  <td><input type="text" name="no-of-chargebacks9"></td>
-                  <td><input type="text" name="refunds-volume9"></td>
-                  <td><input type="text" name="no-of-refunds9"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 10</th>
-                  <td><input type="text" name="sales-volume10"></td>
-                  <td><input type="text" name="no-of-transactions10"></td>
-                  <td><input type="text" name="chargeback-volume10"></td>
-                  <td><input type="text" name="no-of-chargebacks10"></td>
-                  <td><input type="text" name="refunds-volume10"></td>
-                  <td><input type="text" name="no-of-refunds10"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 11</th>
-                  <td><input type="text" name="sales-volume11"></td>
-                  <td><input type="text" name="no-of-transactions11"></td>
-                  <td><input type="text" name="chargeback-volume11"></td>
-                  <td><input type="text" name="no-of-chargebacks11"></td>
-                  <td><input type="text" name="refunds-volume11"></td>
-                  <td><input type="text" name="no-of-refunds11"></td>
-                </tr>
-                <tr>
-                  <th scope="row">Month 12</th>
-                  <td><input type="text" name="sales-volume12"></td>
-                  <td><input type="text" name="no-of-transactions12"></td>
-                  <td><input type="text" name="chargeback-volume12"></td>
-                  <td><input type="text" name="no-of-chargebacks12"></td>
-                  <td><input type="text" name="refunds-volume12"></td>
-                  <td><input type="text" name="no-of-refunds12"></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="form-inline form-file"><span>Alternatively the processing history can be uploade as pdf document</span><label><button type="button" class="btn btn--orange"><span><i class="glyphicon glyphicon-plus"></i></span>Upload PDF</button><input type="file" name="upload-pdf"></label></div>
-            <div
-              class="text-center"><button class="btn btn--big">NEXT STEP</button></div>
-        </form>
-      </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Sales Volume</th>
+                <th>No. of Transactions</th>
+                <th>Chargeback Volume</th>
+                <th>No. of Chargebacks</th>
+                <th>Refunds Volume</th>
+                <th>No. of Refunds</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Last Month</td>
+                <td><input type="text" name="sales-volume"></td>
+                <td><input type="text" name="no-of-transactions"></td>
+                <td><input type="text" name="chargeback-volume"></td>
+                <td><input type="text" name="no-of-chargebacks"></td>
+                <td><input type="text" name="refunds-volume"></td>
+                <td><input type="text" name="no-of-refunds"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 2</th>
+                <td><input type="text" name="sales-volume2"></td>
+                <td><input type="text" name="no-of-transactions2"></td>
+                <td><input type="text" name="chargeback-volume2"></td>
+                <td><input type="text" name="no-of-chargebacks2"></td>
+                <td><input type="text" name="refunds-volume2"></td>
+                <td><input type="text" name="no-of-refunds2"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 3</th>
+                <td><input type="text" name="sales-volume3"></td>
+                <td><input type="text" name="no-of-transactions3"></td>
+                <td><input type="text" name="chargeback-volume3"></td>
+                <td><input type="text" name="no-of-chargebacks3"></td>
+                <td><input type="text" name="refunds-volume3"></td>
+                <td><input type="text" name="no-of-refunds3"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 4</th>
+                <td><input type="text" name="sales-volume4"></td>
+                <td><input type="text" name="no-of-transactions4"></td>
+                <td><input type="text" name="chargeback-volume4"></td>
+                <td><input type="text" name="no-of-chargebacks4"></td>
+                <td><input type="text" name="refunds-volume4"></td>
+                <td><input type="text" name="no-of-refunds4"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 5</th>
+                <td><input type="text" name="sales-volume5"></td>
+                <td><input type="text" name="no-of-transactions5"></td>
+                <td><input type="text" name="chargeback-volume5"></td>
+                <td><input type="text" name="no-of-chargebacks5"></td>
+                <td><input type="text" name="refunds-volume5"></td>
+                <td><input type="text" name="no-of-refunds5"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 6</th>
+                <td><input type="text" name="sales-volume6"></td>
+                <td><input type="text" name="no-of-transactions6"></td>
+                <td><input type="text" name="chargeback-volume6"></td>
+                <td><input type="text" name="no-of-chargebacks6"></td>
+                <td><input type="text" name="refunds-volume6"></td>
+                <td><input type="text" name="no-of-refunds6"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 7</th>
+                <td><input type="text" name="sales-volume7"></td>
+                <td><input type="text" name="no-of-transactions7"></td>
+                <td><input type="text" name="chargeback-volume7"></td>
+                <td><input type="text" name="no-of-chargebacks7"></td>
+                <td><input type="text" name="refunds-volume7"></td>
+                <td><input type="text" name="no-of-refunds7"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 8</th>
+                <td><input type="text" name="sales-volume8"></td>
+                <td><input type="text" name="no-of-transactions8"></td>
+                <td><input type="text" name="chargeback-volume8"></td>
+                <td><input type="text" name="no-of-chargebacks8"></td>
+                <td><input type="text" name="refunds-volume8"></td>
+                <td><input type="text" name="no-of-refunds8"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 9</th>
+                <td><input type="text" name="sales-volume9"></td>
+                <td><input type="text" name="no-of-transactions9"></td>
+                <td><input type="text" name="chargeback-volume9"></td>
+                <td><input type="text" name="no-of-chargebacks9"></td>
+                <td><input type="text" name="refunds-volume9"></td>
+                <td><input type="text" name="no-of-refunds9"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 10</th>
+                <td><input type="text" name="sales-volume10"></td>
+                <td><input type="text" name="no-of-transactions10"></td>
+                <td><input type="text" name="chargeback-volume10"></td>
+                <td><input type="text" name="no-of-chargebacks10"></td>
+                <td><input type="text" name="refunds-volume10"></td>
+                <td><input type="text" name="no-of-refunds10"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 11</th>
+                <td><input type="text" name="sales-volume11"></td>
+                <td><input type="text" name="no-of-transactions11"></td>
+                <td><input type="text" name="chargeback-volume11"></td>
+                <td><input type="text" name="no-of-chargebacks11"></td>
+                <td><input type="text" name="refunds-volume11"></td>
+                <td><input type="text" name="no-of-refunds11"></td>
+              </tr>
+              <tr>
+                <th scope="row">Month 12</th>
+                <td><input type="text" name="sales-volume12"></td>
+                <td><input type="text" name="no-of-transactions12"></td>
+                <td><input type="text" name="chargeback-volume12"></td>
+                <td><input type="text" name="no-of-chargebacks12"></td>
+                <td><input type="text" name="refunds-volume12"></td>
+                <td><input type="text" name="no-of-refunds12"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="form-inline form-file"><span>Alternatively the processing history can be uploade as pdf document</span><label><button type="button" class="btn btn--orange"><span><i class="glyphicon glyphicon-plus"></i></span>Upload PDF</button><input type="file" name="upload-pdf"></label></div>
+          <div
+            class="text-center"><button class="btn btn--big">NEXT STEP</button></div>
     </div>
+    </form>
     </div>
     <!--LOAD SCRIPTS-->
     <script type="text/javascript" src="js/app.js"></script>

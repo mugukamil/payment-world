@@ -34,11 +34,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $payListImgWrap.on('click', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('active checked');
-    });
-
     $formDirector.on('click', '.btn--orange', function(e) {
         e.preventDefault();
 
