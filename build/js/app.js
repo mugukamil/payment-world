@@ -6,7 +6,8 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
 
 
 jQuery(document).ready(function($) {
-    var $jsSelect = $('.js-select'),
+    var $mainForm = $('.main-form'),
+        $jsSelect = $('.js-select'),
         $inputNumWrap = $('.input-num-wrapper'),
         $inputNum = $('.input-num'),
         $payListImgWrap = $('.payments-list__img-wrap'),
@@ -17,9 +18,10 @@ jQuery(document).ready(function($) {
         var $jsSel = $(this).siblings('.js-select');
 
         if ($jsSel.val().length) {
-            $(this).after('<span class="label label-default">' + $jsSel.val() + '</span>');
+            $(this).after('<span class="label label-default">' + $jsSel.val() + '<span class="label__remove"><i class="glyphicon glyphicon-remove"></i></span></span>');
         }
     });
+
     $inputNumWrap.next('.btn--orange').on('click', function(e) {
         e.preventDefault();
         var $this = $(this),
@@ -47,6 +49,11 @@ jQuery(document).ready(function($) {
         e.preventDefault();
 
         $index3form.clone(true).insertAfter($index3form);
-    })
+    });
+
+    $mainForm.on('click', '.label__remove', function(event) {
+        event.preventDefault();
+        $(this).closest('.label').remove();
+    });
 
 });

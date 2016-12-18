@@ -6656,6 +6656,18 @@ a.btn i {
   margin-left: 7px;
   padding: 6.5px 17px;
   text-align: center;
+  position: relative;
+}
+
+.form-inline span.label__remove {
+  top: 0;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.form-inline span.label__remove i {
+  font-size: 10px;
 }
 
 .form-inline + .form-inline {
@@ -8140,6 +8152,7 @@ a.btn i {
   }
   .form-inline .label{
     margin-top: 10px;
+    position: relative;
   }
   .form-inline .label-num{
     margin-top: 5px;
