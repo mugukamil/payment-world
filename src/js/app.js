@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 
         if ($jsSel.val().length && $inpNum.val().length) {
             $this.after('<span class="label label-default">' + $jsSel.val()
-                        + ' - ' + $inpNum.val() + '%</span>');
+                        + ' - ' + $inpNum.val() + '%<span class="label__remove"><i class="glyphicon glyphicon-remove"></i></span></span>');
         }
     });
 
