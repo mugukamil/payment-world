@@ -2347,7 +2347,6 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
 input[type="search"] {
@@ -6977,7 +6976,7 @@ a.btn i {
 }
 
 .form-passport .form-group:last-child input {
-  width: 250px;
+  width: 240px;
 }
 
 .assuming-form .owner-date {
@@ -7826,7 +7825,7 @@ a.btn i {
     width: 195px;
   }
   .main-form .select-country{
-    width: 130px;
+    width: 180px;
   }
   .main-form__first label{
     font-size: 14px;
