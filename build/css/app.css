@@ -6956,8 +6956,7 @@ a.btn i {
 }
 
 .date-form .form-group-labeled:last-child input {
-  margin-right: 8px;
-  width: 255px;
+  width: 253px;
 }
 
 .date-form .form-group-labeled:last-child span {
@@ -6969,7 +6968,7 @@ a.btn i {
 }
 
 .date-form .owner-month {
-  width: 130px;
+  width: 125px;
 }
 
 .date-form .owner-year {
@@ -6985,7 +6984,7 @@ a.btn i {
 }
 
 .main-form-first .form-group-labeled input {
-  width: 280px;
+  width: 270px;
 }
 
 .form-passport .form-group.form-group-labeled {
@@ -7080,14 +7079,14 @@ a.btn i {
 
 @media only screen and (min-width: 768px){
   .col-ticket-1 .form-control{
-    width: 70%;
+    width: 68%;
   }
   .col-ticket-2 label{
     margin-top: 4px;
   }
   .col-ticket-2 .form-control{
     float: right;
-    width: 80%;
+    width: 75%;
   }
 }
 
@@ -7399,7 +7398,7 @@ a.btn i {
 
 @media only screen and (min-width: 992px){
   .col-ticket-2 .form-control{
-    width: 83%;
+    width: 79%;
   }
 }
 
@@ -7757,10 +7756,10 @@ a.btn i {
 
 @media only screen and (min-width: 1200px){
   .col-ticket-1 .form-control{
-    width: 71%;
+    width: 69%;
   }
   .col-ticket-2 .form-control{
-    width: 86%;
+    width: 82%;
   }
 }
 
@@ -7865,7 +7864,7 @@ a.btn i {
     margin-left: 10px;
   }
   .date-form .form-group-labeled:last-child input{
-    width: 200px;
+    width: 209px;
   }
   .date-form .owner-date{
     width: 70px;
@@ -7918,7 +7917,7 @@ a.btn i {
     padding-left: 4px;
   }
   .date-form .form-group-labeled:last-child input{
-    width: 130px;
+    width: 141px;
   }
   .main-form-first .form-group input{
     width: 120px;
